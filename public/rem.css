@@ -1,0 +1,324 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    background: url('https://i.pinimg.com/originals/bc/e1/d7/bce1d74e9e4e08bd9f7cc4a73eeb423e.jpg') no-repeat center center fixed;
+    background-size: cover;
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: #250d48;
+    display: flex;
+    align-items: center;
+    height: 135px;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+/* Logo */
+.log {
+    display: flex;
+    align-items: center;
+}
+
+.log img {
+    max-height: 80px;
+    width: auto;
+    cursor: pointer;
+}
+
+/* PastPocket Name */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.logo,
+.logo1 {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.logo {
+    color: #f6f6f6;
+}
+
+.logo1 {
+    color: #e0338a;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin-left: 40px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e0338a;
+}
+
+/* Main Content Layout */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Map Section */
+#map {
+    flex: 1;
+    height: 500px;
+    max-width: 600px;
+    border-radius: 25px;
+    border: 3px solid #ff0077;
+    box-shadow: 0px 0px 10px rgba(255, 107, 171, 0.5);
+}
+
+/* Reminder Container Styling */
+.container {
+    background: rgba(37, 13, 72, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    width: 450px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 15px rgba(255, 107, 171, 0.5);
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #ff0077;
+    text-transform: uppercase;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #ff0077;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #e0338a;
+    box-shadow: 0 0 10px rgba(255, 107, 171, 0.8);
+}
+
+/* Buttons */
+button,
+.delete-btn {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+
+button {
+    background: linear-gradient(135deg, #ff0077, #D72638);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #D72638, #ff0077);
+    transform: scale(1.05);
+}
+
+.delete-btn {
+    background: #e0338a;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.delete-btn:hover {
+    background: #ff5cb9;
+}
+
+/* Status & List */
+#status {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #e0338a;
+}
+
+#remindersList {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #250d48;
+    color: white;
+    font-size: 14px;
+}
+
+/* Reminder Card Design */
+.reminder-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid #ff0077;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+    box-shadow: 0px 4px 15px rgba(255, 107, 171, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reminder-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 6px 20px rgba(255, 107, 171, 0.6);
+}
+
+.reminder-card h3 {
+    margin-bottom: 10px;
+    color: #ff5cb9;
+}
+
+.reminder-card p {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* No Reminders Message */
+.no-reminders {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed #ff0077;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(255, 107, 171, 0.3);
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #map {
+        max-width: 100%;
+        height: 400px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .logo,
+    .logo1 {
+        font-size: 28px;
+    }
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

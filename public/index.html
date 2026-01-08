@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PastPocket: Location-Based Time Capsule</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="icon" type="image/png" href="pastpocket-logo.png" />
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth-compat.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAHItLCj4vEmC2b2IIlKZ4tQ1Wuigq8QFo",
+            authDomain: "pastpocket-b24ee.firebaseapp.com",
+            projectId: "pastpocket-b24ee",
+            storageBucket: "pastpocket-b24ee.appspot.com",
+            messagingSenderId: "1041111311431",
+            appId: "1:1041111311431:web:9fc101444fea7bb5f4bd62",
+        };
+
+        if (!firebase.apps.length) {
+            firebase.initializeApp(firebaseConfig);
+            console.log("✅ Firebase Initialized");
+        }
+
+        function checkAndRedirect(page) {
+            firebase.auth().onAuthStateChanged((user) => {
+                if (user) {
+                    window.location.href = page;
+                } else {
+                    window.location.href = "signlocation.html";
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="log">
+                <a href="index.html"><img src="pastpocket-logo.png" alt="PastPocket Logo" /></a>
+                <a href="index.html" class="logo-container">
+                    <span class="logo">Past</span><span class="logo1">Pocket</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="checkAndRedirect('createloc.html')">Capsules</a></li>
+                <li><a href="#" onclick="checkAndRedirect('rem.html')">Reminders</a></li>
+                <li><a href="#" onclick="checkAndRedirect('search.html')">Search</a></li>
+            </ul>
+            <div class="menu">
+                <span class="menu-icon">&#9776;</span>
+                <ul class="menu-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="signlocation.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Unlock Memories, Create Moments</h1>
+            <p>Welcome to PastPocket, where you can create, store, and unlock personal memories at meaningful locations.
+            </p>
+            <a href="#" onclick="checkAndRedirect('createloc.html')" class="cta-btn">+ Create Your Time Capsule</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Features</h2>
+        <div class="features-container">
+            <div class="feature-box">
+                <h3>Location-Based Memories</h3>
+                <p>Create time capsules that can only be opened when you're at a specific place.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Preserve Your Legacy</h3>
+                <p>Upload photos, videos, and memories to unlock at the right moment.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Share with Loved Ones</h3>
+                <p>Make capsules available for others with permissions you define.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Start Preserving Your Memories Today!</h2>
+        <p>Create your first time capsule and leave a lasting mark on your world.</p>
+        <a href="#" onclick="checkAndRedirect('createloc.html')" class="cta-btn">Get Started</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 PastPocket | Created by <strong>Srihari KY</strong></p>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <span>🤖 Ask PastPocket</span>
+            <button onclick="toggleChat()">−</button>
+        </div>
+        <div class="chatbot-body" id="chatLog"></div>
+        <div class="chatbot-input">
+            <input type="text" id="userInput" placeholder="Ask a question..." onkeypress="handleEnter(event)" />
+            <button onclick="handleChat()">Send</button>
+        </div>
+    </div>
+    <button id="chatbotToggle" onclick="toggleChat()">💬</button>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Capsules - PastPocket</title>
+    <link rel="stylesheet" href="search.css" />
+    <link rel="icon" type="image/png" href="pastpocket-logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="log">
+                <a href="index.html">
+                    <img src="pastpocket-logo.png" alt="PastPocket Logo" />
+                </a>
+                <a href="index.html" class="logo-container">
+                    <span class="logo">Past</span><span class="logo1">Pocket</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="createloc.html">Capsules</a></li>
+                <li><a href="rem.html">Reminders</a></li>
+                <li><a href="search.html">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-container">
+            <h1>Find Your Time Capsules</h1>
+            <p>Search for your stored memories by title, keyword, or location.</p>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by title, keyword, or location..." />
+                <button id="searchButton"><i class="fas fa-search"></i> Search</button>
+            </div>
+
+            <!-- Filter Dropdown -->
+            <div class="filter-box">
+                <label for="locationFilter">Filter by Location:</label>
+                <select id="locationFilter">
+                    <option value="">All Locations</option>
+                </select>
+            </div>
+
+            <div id="searchResults" class="search-results"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PastPocket. All rights reserved. | Developed by <strong>Srihari KY</strong></p>
+    </footer>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAHItLCj4vEmC2b2IIlKZ4tQ1Wuigq8QFo",
+            authDomain: "pastpocket-b24ee.firebaseapp.com",
+            projectId: "pastpocket-b24ee",
+            storageBucket: "pastpocket-b24ee.appspot.com",
+            messagingSenderId: "1041111311431",
+            appId: "1:1041111311431:web:9fc101444fea7bb5f4bd62"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="search.js"></script>
+</body>
+
+</html>

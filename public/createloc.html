@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Capsule - PastPocket</title>
+    <link rel="stylesheet" href="createloc.css">
+    <link rel="icon" type="image/png" href="pastpocket-logo.png">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="log">
+                <a href="index.html">
+                    <img src="pastpocket-logo.png" alt="PastPocket Logo">
+                </a>
+                <a href="index.html" class="logo-container">
+                    <span class="logo">Past</span><span class="logo1">Pocket</span>
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="createloc.html">Capsules</a></li>
+                <li><a href="rem.html">Reminders</a></li>
+                <li><a href="search.html">Search</a></li>
+
+            </ul>
+            <div class="menu">
+                <i class="fas fa-bars menu-icon"></i>
+                <ul class="menu-links">
+                    <li><a href="createloc.html">Capsules</a></li>
+                    <li><a href="rem.html">Reminders</a></li>
+                    <li><a href="search.html">Search</a></li>
+                    <li><a href="homeloc.html">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="create-capsule">
+            <h1>Create Your Time Capsule</h1>
+            <form id="capsuleForm">
+                <div class="form-group">
+                    <label for="title">Capsule Title:</label>
+                    <input type="text" id="title" name="title" placeholder="Enter title" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Describe your capsule"
+                        required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="date">Select a Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Location (Pinned on Map):</label>
+                    <input type="text" id="location" name="location" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="radius">Accessibility Radius (meters):</label>
+                    <input type="number" id="radius" name="radius" value="350" min="50" max="1000">
+                </div>
+                <div class="form-group">
+                    <label for="media">Upload Photos/Videos (Max 5):</label>
+                    <input type="file" id="media" name="media" accept="image/*,video/*" multiple>
+                    <small>Accepted: Images & Videos (Max 5)</small>
+                    <div id="preview"></div>
+                </div>
+                <button type="submit" id="submitBtn">+ Create Capsule</button>
+            </form>
+        </div>
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PastPocket. All rights reserved. Created by <strong>Srihari KY</strong></p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAHItLCj4vEmC2b2IIlKZ4tQ1Wuigq8QFo",
+            authDomain: "pastpocket-b24ee.firebaseapp.com",
+            projectId: "pastpocket-b24ee",
+            storageBucket: "pastpocket-b24ee.appspot.com",
+            messagingSenderId: "1041111311431",
+            appId: "1:1041111311431:web:9fc101444fea7bb5f4bd62"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- Main Script -->
+    <script src="createloc.js"></script>
+
+</body>
+
+</html>

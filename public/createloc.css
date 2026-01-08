@@ -1,0 +1,342 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    background: url('city.jpg') no-repeat center center fixed;
+    background-size: cover;
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+/* Navbar Styling */
+/* Navbar Styling */
+.navbar {
+    background: #250d48;
+    display: flex;
+    align-items: center;
+    height: 135px;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+/* Logo */
+.log {
+    display: flex;
+    align-items: center;
+}
+
+.log img {
+    max-height: 80px;
+    /* Fixed size */
+    width: auto;
+    cursor: pointer;
+}
+
+/* PastPocket Name - Single Clickable Link */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.logo-container .logo,
+.logo-container .logo1 {
+    font-size: 38px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo {
+    color: #f6f6f6;
+}
+
+.logo1 {
+    color: #e0338a;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin-left: 40px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e0338a;
+}
+
+/* Sliding Menu */
+.menu {
+    position: relative;
+    margin-left: 30px;
+}
+
+.menu-icon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-links {
+    list-style: none;
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #250d48;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: right;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-links li {
+    margin-bottom: 10px;
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-links a:hover {
+    color: #e0338a;
+}
+
+/* Show menu on click */
+.menu.active .menu-links {
+    display: block;
+}
+
+
+/* Main Layout */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 85vh;
+    padding: 50px 20px;
+    gap: 50px;
+    /* Increased spacing */
+}
+
+/* Capsule Form */
+.create-capsule {
+    background: rgba(37, 13, 72, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(255, 107, 171, 0.5);
+    width: 450px;
+    backdrop-filter: blur(10px);
+}
+
+.create-capsule h1 {
+    font-size: 28px;
+    /* Slightly smaller */
+    font-weight: 800;
+    color: #ff0077;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Form Inputs */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 800;
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #ff0077;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #e0338a;
+    box-shadow: 0px 0px 10px rgba(255, 107, 171, 0.8);
+}
+
+/* Map Container */
+.map-container {
+    flex: 1;
+    text-align: left;
+    width: 60%;
+    /* Increased width */
+    display: flow-root;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 500px;
+    /* Increased size */
+}
+
+#map {
+    height: 650px;
+    /* Increased height */
+    width: 90%;
+    max-width: 850px;
+    /* Increased max size */
+    border-radius: 35px;
+    border: 3px solid #ff0077;
+    box-shadow: 0px 0px 10px rgba(255, 107, 171, 0.5);
+    display: block;
+}
+
+/* Submit Button */
+button {
+    background: linear-gradient(135deg, #ff0077, #D72638);
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 800;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #D72638, #ff0077);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 107, 171, 0.6);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #250d48;
+    color: white;
+    font-size: 14px;
+}
+
+/* Fix Menu Toggle */
+.menu-links {
+    display: none;
+}
+
+.menu-links.active {
+    display: block;
+}
+
+/* Fix Logo Alignment */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    /* Adds space between logo and text */
+}
+
+.log img {
+    max-height: 109px;
+    /* Reduce logo size */
+    width: auto;
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+        align-items: flex-start;
+    }
+
+    .log img {
+        max-height: 70px;
+    }
+
+    .logo-container {
+        margin-left: 0;
+        font-size: 28px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .create-capsule {
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+        padding: 20px;
+    }
+
+    .map-container {
+        width: 100%;
+        min-width: auto;
+    }
+
+    #map {
+        height: 400px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .menu-links {
+        right: 10px;
+        width: 200px;
+    }
+}

@@ -1,0 +1,108 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Authentication Container */
+.auth-container {
+    background: rgba(37, 13, 72, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(255, 107, 171, 0.5);
+    width: 400px;
+    backdrop-filter: blur(10px);
+}
+
+.auth-container h1 {
+    font-size: 24px;
+    color: #ff0077;
+    margin-bottom: 20px;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid #ff0077;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    outline: none;
+    font-size: 16px;
+}
+
+/* Password Input Container */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px;
+    /* Space for eye icon */
+}
+
+/* Eye Icon */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: #ff0077;
+}
+
+/* Button */
+.auth-container button {
+    background: #ff0077;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.auth-container button:hover {
+    background: #e0338a;
+}
+
+.auth-container p {
+    margin-top: 15px;
+    color: white;
+}
+
+.auth-container a {
+    color: #ff0077;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    color: #e0338a;
+}

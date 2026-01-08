@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - PastPocket</title>
+    <link rel="stylesheet" href="signlocation.css">
+    <link rel="icon" type="image/png" href="pastpocket-logo.png">
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth-compat.js"></script>
+</head>
+
+<body>
+    <div class="auth-container">
+        <!-- Login Form -->
+        <div id="login-form">
+            <h1>Login to PastPocket</h1>
+            <input type="email" id="login-email" placeholder="Enter your email" required>
+
+            <div class="password-container">
+                <input type="password" id="login-password" placeholder="Enter your password" required>
+                <i class="fas fa-eye-slash toggle-password" onclick="togglePassword('login-password', this)"></i>
+            </div>
+
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign Up</a></p>
+        </div>
+
+        <!-- Sign-Up Form (Initially Hidden) -->
+        <div id="signup-form" style="display: none;">
+            <h1>Create a PastPocket Account</h1>
+            <input type="email" id="signup-email" placeholder="Enter your email" required>
+
+            <div class="password-container">
+                <input type="password" id="signup-password" placeholder="Create a password" required>
+                <i class="fas fa-eye-slash toggle-password" onclick="togglePassword('signup-password', this)"></i>
+            </div>
+
+            <button onclick="signup()">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="toggleForms()">Login</a></p>
+        </div>
+    </div>
+
+    <script src="signlocation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+</body>
+
+</html>

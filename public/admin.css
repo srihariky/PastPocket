@@ -1,0 +1,35 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://t3.ftcdn.net/jpg/02/25/02/48/360_F_225024841_7b2gkqxIyskWsexHw19gIW9fro1iuOns.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgba(88, 23, 105, 0.373);
+    padding: 60px;
+    border: rgb(23, 19, 19) solid 3px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.479);
+    width: 400px;
+    text-align: center;
+    color: white;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: red;
+}
